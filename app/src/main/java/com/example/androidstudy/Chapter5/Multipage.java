@@ -1,4 +1,4 @@
-package com.example.androidstudy;
+package com.example.androidstudy.Chapter5;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,9 +7,12 @@ import android.widget.Button;
 
 import androidx.annotation.Nullable;
 
+import com.example.androidstudy.R;
+
 public class Multipage extends Activity implements View.OnClickListener {
-    View mPage1,mPage2,mPage3 ;
-    Button mBtnPage1,mBtnPage2,mBtnPage3;
+    View mPage1, mPage2, mPage3;
+    Button mBtnPage1, mBtnPage2, mBtnPage3;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

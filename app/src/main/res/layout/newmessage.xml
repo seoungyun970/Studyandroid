@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/relative">
+    android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
-        android:src="@drawable/ic_launcher_background"/>
+        android:src="@drawable/ic_launcher_background" />
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/desc"
-        android:layout_toRightOf="@+id/picture"
-        android:textSize="12dp"
-        android:textColor="#00ff00"
-        android:text="new message"/>
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/picture"
+        android:text="new message"
+        android:textColor="#00ff00"
+        android:textSize="12dp" />
+
+    <TextView
         android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/desc"
         android:layout_alignLeft="@+id/desc"
-        android:textSize="20dp"
+        android:text="!!!!!!!"
         android:textColor="#ffff00"
-        android:text="!!!!!!!"/>
+        android:textSize="20dp" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:textColor="#0000ff"
-        android:text="see"/>
+        android:text="see"
+        android:textColor="#0000ff" />
 </RelativeLayout>

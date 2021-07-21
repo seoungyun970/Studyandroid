@@ -1,35 +1,40 @@
 package com.example.androidstudy;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Trace;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.androidstudy.Adapter.MainActivityAdapter;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    ArrayList<String> list;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView textView = new TextView(this);
-//        textView.setText("코드로 문자열 출력하기");
-//        setContentView(textView);
-        Button btn = findViewById(R.id.btn);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,LayoutParameter2.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+        list = new ArrayList<>();
+        list.add("chapter4");
+        list.add("chapter5");
+        list.add("chapter6");
+        list.add("chapter7");
+        list.add("chapter8");
+        list.add("chapter9");
+        list.add("chapter10");
+        list.add("chapter11");
+        list.add("chapter12");
+        list.add("chapter13");
+
+        MainActivityAdapter adapter = new MainActivityAdapter(list);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
 
     }
 }

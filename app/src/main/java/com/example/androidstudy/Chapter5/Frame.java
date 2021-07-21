@@ -1,4 +1,4 @@
-package com.example.androidstudy;
+package com.example.androidstudy.Chapter5;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
+
+import com.example.androidstudy.R;
 
 public class Frame extends Activity implements View.OnClickListener {
     @Override

@@ -16,19 +16,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ButtonEdit">
+        <activity android:name=".chapter4.ButtonEdit">
 
         </activity>
-        <activity android:name=".IfMissing"/>
-        <activity android:name=".Frame"/>
-        <activity android:name=".Multipage"/>
-        <activity android:name=".CodeLayout"/>
-        <activity android:name=".Inflation"/>
-        <activity android:name=".Inflation2"/>
-        <activity android:name=".Inflation3"/>
-        <activity android:name=".Inflation4"/>
-        <activity android:name=".Inflation5"/>
-        <activity android:name=".LayoutParameter2"/>
+        <activity android:name=".Chapter5.IfMissing"/>
+        <activity android:name=".Chapter5.Frame"/>
+        <activity android:name=".Chapter5.Multipage"/>
+        <activity android:name=".Chapter5.CodeLayout"/>
+        <activity android:name=".Chapter5.Inflation"/>
+        <activity android:name=".Chapter5.Inflation2"/>
+        <activity android:name=".Chapter5.Inflation3"/>
+        <activity android:name=".Chapter5.Inflation4"/>
+        <activity android:name=".Chapter5.Inflation5"/>
+        <activity android:name=".chapter6.LayoutParameter2"/>
+        <activity android:name=".Chapter7Activity"/>
+        <activity android:name=".chapter7.PermModelActivity"/>
+        <activity android:name=".Chapter4Activity"/>
+        <activity android:name=".chapter4.TestViewTest"/>
+        <activity android:name=".Chapter5Activity"/>
+        <activity android:name=".Chapter6Activity"/>
+        <activity android:name=".chapter6.LayoutParameter"/>
+        <activity android:name=".chapter6.LayoutParameter3"/>
+
     </application>
 
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 </manifest>

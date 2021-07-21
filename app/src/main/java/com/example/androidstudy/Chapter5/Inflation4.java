@@ -1,4 +1,4 @@
-package com.example.androidstudy;
+package com.example.androidstudy.Chapter5;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import com.example.androidstudy.R;
+
 public class Inflation4 extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -17,7 +19,7 @@ public class Inflation4 extends Activity {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         linearLayout.setBackgroundColor(Color.LTGRAY);
 
-        TextView textView = (TextView) View.inflate(this,R.layout.mytest,null);
+        TextView textView = (TextView) View.inflate(this, R.layout.mytest, null);
 
         linearLayout.addView(textView);
         setContentView(linearLayout);

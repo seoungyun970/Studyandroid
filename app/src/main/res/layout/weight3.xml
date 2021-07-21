@@ -7,16 +7,18 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:text="tool bar"
-        android:layout_weight="0"/>
+        android:layout_weight="0"
+        android:text="tool bar" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#00ff00"/>
+        android:background="#00ff00" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:text="menu bar"
-        android:layout_weight="0"/>
+        android:layout_weight="0"
+        android:text="menu bar" />
 </LinearLayout>

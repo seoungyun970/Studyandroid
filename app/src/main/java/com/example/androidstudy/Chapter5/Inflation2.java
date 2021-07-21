@@ -1,4 +1,4 @@
-package com.example.androidstudy;
+package com.example.androidstudy.Chapter5;
 
 import android.app.Activity;
 import android.graphics.Color;

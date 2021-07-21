@@ -1,14 +1,17 @@
-package com.example.androidstudy;
+package com.example.androidstudy.Chapter5;
 
 import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
-public class LayoutParameter extends Activity {
+import com.example.androidstudy.R;
+
+public class Inflation extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_parameter);
+        setContentView(R.layout.inflation);
+
     }
 }

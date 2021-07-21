@@ -10,98 +10,111 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/btnPage1"
-            android:text="page1"/>
-        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="page1" />
+
+        <Button
             android:id="@+id/btnPage2"
-            android:text="page2"/>
-        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="page2" />
+
+        <Button
             android:id="@+id/btnPage3"
-            android:text="page3"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="page3" />
     </LinearLayout>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
+            android:id="@+id/page1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/page1"
-            android:background="#ffff00">
+            android:background="#ffff00"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:text="첫번째 페이지"/>
+                android:text="첫번째 페이지"
+                android:textColor="#000000" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_launcher_background"/>
+                android:src="@drawable/ic_launcher_background" />
 
         </LinearLayout>
+
         <RelativeLayout
+            android:id="@+id/page2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/page2"
-            android:visibility="invisible"
-            android:background="#00ff00">
+            android:background="#00ff00"
+            android:visibility="invisible">
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:text="두번째 페이지"/>
+                android:text="두번째 페이지" />
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:text="Button"/>
+                android:text="Button" />
         </RelativeLayout>
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/page3"
-                android:visibility="invisible"
-                android:background="#0000ff">
 
-                <TableRow>
-                    <TextView
-                        android:text="kor"
-                        android:textSize="30dp"
-                        android:padding="10dp"/>
+        <TableLayout
+            android:id="@+id/page3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#0000ff"
+            android:visibility="invisible">
 
-                    <TextView
-                        android:text="eng"
-                        android:textSize="30dp"
-                        android:padding="10dp"/>
+            <TableRow>
 
-                    <TextView
-                        android:text="math"
-                        android:textSize="30dp"
-                        android:padding="10dp"/>
-                </TableRow>
+                <TextView
+                    android:padding="10dp"
+                    android:text="kor"
+                    android:textSize="30dp" />
 
-                <TableRow>
-                    <TextView
-                        android:text="88"
-                        android:textSize="30dp"
-                        android:padding="10dp"/>
-                    <TextView
-                        android:text="78"
-                        android:textSize="30dp"
-                        android:padding="10dp"/>
-                    <TextView
-                        android:text="68"
-                        android:textSize="30dp"
-                        android:padding="10dp"/>
-                </TableRow>
-            </TableLayout>
+                <TextView
+                    android:padding="10dp"
+                    android:text="eng"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:padding="10dp"
+                    android:text="math"
+                    android:textSize="30dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="10dp"
+                    android:text="88"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:padding="10dp"
+                    android:text="78"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:padding="10dp"
+                    android:text="68"
+                    android:textSize="30dp" />
+            </TableRow>
+        </TableLayout>
 
     </FrameLayout>
 </LinearLayout>

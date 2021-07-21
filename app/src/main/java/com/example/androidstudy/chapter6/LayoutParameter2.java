@@ -1,4 +1,4 @@
-package com.example.androidstudy;
+package com.example.androidstudy.chapter6;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -9,11 +9,10 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-public class LayoutParameter3 extends Activity {
+public class LayoutParameter2 extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         LinearLayout linearLayout = new LinearLayout(this);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         linearLayout.setGravity(Gravity.CENTER);
@@ -24,9 +23,7 @@ public class LayoutParameter3 extends Activity {
         textView.setTextSize(20);
         textView.setBackgroundColor(Color.GREEN);
 
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT);
-        linearLayout.addView(textView,params);
+        linearLayout.addView(textView);
         setContentView(linearLayout);
     }
 }

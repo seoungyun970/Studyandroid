@@ -2,25 +2,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/btnToggle"
-        android:text="아이콘 토글"
-        android:layout_alignParentLeft="true"/>
-    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="아이콘 토글" />
+
+    <ImageView
         android:id="@+id/icon"
-        android:src="@drawable/ic_launcher_background"
-        android:layout_alignParentRight="true"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_launcher_background" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="안드로이드 정복"
-        android:textSize="20dp"
+        android:layout_alignWithParentIfMissing="true"
         android:layout_toLeftOf="@+id/icon"
-        android:layout_alignWithParentIfMissing="true"/>
+        android:text="안드로이드 정복"
+        android:textSize="20dp" />
 
 </RelativeLayout>

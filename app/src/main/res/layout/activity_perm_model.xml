@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/myLinear"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/myButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="button" />
+        android:id="@+id/btn_read"
+        android:text="주소록 읽기"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_reset"
+        android:text="초기화"/>
 
     <TextView
-        android:id="@+id/myText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="문자열" />
-
-    <EditText
-        android:id="@+id/myEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="edit" />
+        android:id="@+id/tv_result"
+        android:text="주소록"/>
 </LinearLayout>
