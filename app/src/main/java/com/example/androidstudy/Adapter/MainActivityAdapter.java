@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.androidstudy.Chapter11Activity;
 import com.example.androidstudy.Chapter4Activity;
 import com.example.androidstudy.Chapter5Activity;
 import com.example.androidstudy.Chapter6Activity;
@@ -19,15 +20,16 @@ import java.util.ArrayList;
 
 public class MainActivityAdapter extends RecyclerView.Adapter<Holder> {
     private ArrayList<String> list;
+
     public MainActivityAdapter(ArrayList<String> list) {
         this.list = list;
     }
 
     @Override
     public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Context context =parent.getContext();
+        Context context = parent.getContext();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.main_item,parent,false);
+        View view = inflater.inflate(R.layout.main_item, parent, false);
         return new Holder(view);
     }
 
@@ -37,11 +39,11 @@ public class MainActivityAdapter extends RecyclerView.Adapter<Holder> {
         holder.tv.setOnClickListener(v -> {
             Intent intent = new Intent();
             switch (position) {
-                case 0 :
+                case 0:
                     intent = new Intent(v.getContext(), Chapter4Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 1 :
+                case 1:
                     intent = new Intent(v.getContext(), Chapter5Activity.class);
                     v.getContext().startActivity(intent);
                     break;
@@ -49,8 +51,12 @@ public class MainActivityAdapter extends RecyclerView.Adapter<Holder> {
                     intent = new Intent(v.getContext(), Chapter6Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 3 :
+                case 3:
                     intent = new Intent(v.getContext(), Chapter7Activity.class);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 4:
+                    intent = new Intent(v.getContext(), Chapter11Activity.class);
                     v.getContext().startActivity(intent);
                     break;
             }
@@ -66,6 +72,7 @@ public class MainActivityAdapter extends RecyclerView.Adapter<Holder> {
 
 class Holder extends RecyclerView.ViewHolder {
     TextView tv;
+
     public Holder(View itemView) {
         super(itemView);
         tv = itemView.findViewById(R.id.text);

@@ -37,7 +37,15 @@
         <activity android:name=".Chapter6Activity"/>
         <activity android:name=".chapter6.LayoutParameter"/>
         <activity android:name=".chapter6.LayoutParameter3"/>
-
+        <activity android:name=".Chapter11Activity"/>
+        <activity android:name=".chapter11.TextChangeActivity"/>
+        <activity android:name=".chapter11.GramPriceActivity"/>
+        <activity android:name=".chapter11.ListviewActivity"/>
+        <activity android:name=".chapter11.ListFromArrayActivity"/>
+        <activity android:name=".chapter11.ListAttrActivity"/>
+        <activity android:name=".chapter11.ListItemSelectActivity"/>
+        <activity android:name=".chapter11.ListAddDelActivity"/>
+        <activity android:name=".chapter11.ListAddDelMultiActivity"/>
     </application>
 
     <uses-permission android:name="android.permission.READ_CONTACTS"/>

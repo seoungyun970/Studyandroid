@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ArrayList<String> list;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +24,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("chapter5");
         list.add("chapter6");
         list.add("chapter7");
-        list.add("chapter8");
-        list.add("chapter9");
-        list.add("chapter10");
         list.add("chapter11");
         list.add("chapter12");
         list.add("chapter13");
