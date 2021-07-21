@@ -29,6 +29,7 @@
         <activity android:name=".Inflation4"/>
         <activity android:name=".Inflation5"/>
         <activity android:name=".LayoutParameter2"/>
+        <activity android:name=".SetParameter"/>
     </application>
 
 </manifest>
