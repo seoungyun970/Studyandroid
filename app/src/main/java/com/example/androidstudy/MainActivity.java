@@ -20,13 +20,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         list = new ArrayList<>();
-        list.add("chapter4");
-        list.add("chapter5");
-        list.add("chapter6");
-        list.add("chapter7");
-        list.add("chapter11");
-        list.add("chapter12");
-        list.add("chapter13");
+        list.add("chapter4 - 뷰");
+        list.add("chapter5 - 레이아웃");
+        list.add("chapter6 - 레이아웃 관리");
+        list.add("chapter7 - 출력");
+        list.add("chapter11 - 기본위젯");
+        list.add("chapter12 - 어댑터뷰");
+        list.add("chapter13 - 고급위젯");
+        list.add("chapter16 - 대화상자");
+        list.add("chapter17 - activity");
+        list.add("chapter19 - 스레드");
 
         MainActivityAdapter adapter = new MainActivityAdapter(list);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);

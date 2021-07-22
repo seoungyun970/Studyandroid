@@ -41,10 +41,6 @@ public class Chapter4Adapter extends RecyclerView.Adapter<MyHolder>{
                     intent = new Intent(v.getContext(), ButtonEdit.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 1 :
-                    intent = new Intent(v.getContext(), TestViewTest.class);
-                    v.getContext().startActivity(intent);
-                    break;
             }
 
         });

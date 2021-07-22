@@ -10,6 +10,11 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidstudy.Chapter11Activity;
+import com.example.androidstudy.Chapter12Activity;
+import com.example.androidstudy.Chapter13Activity;
+import com.example.androidstudy.Chapter16Activity;
+import com.example.androidstudy.Chapter17Activity;
+import com.example.androidstudy.Chapter19Activity;
 import com.example.androidstudy.Chapter4Activity;
 import com.example.androidstudy.Chapter5Activity;
 import com.example.androidstudy.Chapter6Activity;
@@ -37,7 +42,7 @@ public class MainActivityAdapter extends RecyclerView.Adapter<Holder> {
     public void onBindViewHolder(Holder holder, int position) {
         holder.tv.setText(list.get(position));
         holder.tv.setOnClickListener(v -> {
-            Intent intent = new Intent();
+            Intent intent;
             switch (position) {
                 case 0:
                     intent = new Intent(v.getContext(), Chapter4Activity.class);
@@ -57,6 +62,26 @@ public class MainActivityAdapter extends RecyclerView.Adapter<Holder> {
                     break;
                 case 4:
                     intent = new Intent(v.getContext(), Chapter11Activity.class);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 5:
+                    intent = new Intent(v.getContext(), Chapter12Activity.class);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 6:
+                    intent = new Intent(v.getContext(), Chapter13Activity.class);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 7:
+                    intent = new Intent(v.getContext(), Chapter16Activity.class);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 8:
+                    intent = new Intent(v.getContext(), Chapter17Activity.class);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 9:
+                    intent = new Intent(v.getContext(), Chapter19Activity.class);
                     v.getContext().startActivity(intent);
                     break;
             }
