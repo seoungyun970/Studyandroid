@@ -17,34 +17,34 @@ import com.example.androidstudy.chapter19.LongTime2Activity;
 import com.example.androidstudy.chapter19.LongTimeActivity;
 import com.example.androidstudy.chapter19.LooperTestActivity;
 import com.example.androidstudy.chapter19.ThreadTest2Activity;
-import com.example.androidstudy.chapter19.ThreadTestActivity;
 import com.example.androidstudy.chapter19.UpLoadActivity;
+import com.example.androidstudy.chapter20.TestFragActivity;
 
 import java.util.ArrayList;
 
-public class Chapter19Adapter extends RecyclerView.Adapter<MyHolder19> {
+public class Chapter20Adapter extends RecyclerView.Adapter<MyHolder20> {
     private ArrayList<String> list;
 
-    public Chapter19Adapter(ArrayList<String> list) {
+    public Chapter20Adapter(ArrayList<String> list) {
         this.list = list;
     }
 
     @Override
-    public MyHolder19 onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyHolder20 onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.main_item, parent, false);
-        return new MyHolder19(view);
+        return new MyHolder20(view);
     }
 
     @Override
-    public void onBindViewHolder(MyHolder19 holder, int position) {
+    public void onBindViewHolder(MyHolder20 holder, int position) {
         holder.tv.setText(list.get(position));
         holder.tv.setOnClickListener(v -> {
             Intent intent;
             switch (position) {
                 case 0:
-                    intent = new Intent(v.getContext(), ThreadTestActivity.class);
+                    intent = new Intent(v.getContext(), TestFragActivity.class);
                     v.getContext().startActivity(intent);
                     break;
                 case 1:
@@ -90,10 +90,10 @@ public class Chapter19Adapter extends RecyclerView.Adapter<MyHolder19> {
     }
 }
 
-class MyHolder19 extends RecyclerView.ViewHolder {
+class MyHolder20 extends RecyclerView.ViewHolder {
     TextView tv;
 
-    public MyHolder19(View itemView) {
+    public MyHolder20(View itemView) {
         super(itemView);
         tv = itemView.findViewById(R.id.text);
     }

@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         list.add("chapter16 - 대화상자");
         list.add("chapter17 - activity");
         list.add("chapter19 - 스레드");
+        list.add("chapter20 - 프래그먼트");
+        list.add("chapter21 - 액션바");
+        list.add("chapter25 - 파일");
 
         MainActivityAdapter adapter = new MainActivityAdapter(list);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);

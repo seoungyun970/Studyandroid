@@ -63,6 +63,22 @@
         <activity android:name=".chapter19.ThreadTest2Activity"/>
         <activity android:name=".chapter19.HandlerActivity"/>
         <activity android:name=".chapter19.LooperTestActivity"/>
+        <activity android:name=".chapter19.UpLoadActivity"/>
+        <activity android:name=".chapter19.ANRActivity"/>
+        <activity android:name=".chapter19.ANR2Activity"/>
+        <activity android:name=".chapter19.LongTimeActivity"/>
+        <activity android:name=".chapter19.LongTime2Activity"/>
+        <activity android:name=".Chapter20Activity"/>
+        <activity android:name=".chapter20.TestFragActivity"/>
+        <activity android:name=".Chapter21Activity"/>
+        <activity android:name=".chapter21.ActionBarActivity"
+            android:theme="@style/action"
+            android:label="actionBar"
+            />
+        <activity android:name=".Chapter25Activity"/>
+        <activity android:name=".chapter25.FileActivity"/>
+        <activity android:name=".chapter25.FileExplorer"/>
+        <activity android:name=".chapter25.PrefTestActivity"/>
     </application>
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />

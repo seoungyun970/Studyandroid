@@ -30,6 +30,11 @@ public class Chapter19Activity extends Activity {
         list.add("2 - Thread(Runnable)");
         list.add("3 - Handler");
         list.add("4 - looper");
+        list.add("5 - upLoad");
+        list.add("6 - ANR");
+        list.add("7 - ANR2");
+        list.add("8 - LongTime");
+        list.add("9 - AsyncTask");
 
         Chapter19Adapter adapter = new Chapter19Adapter(list);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);

@@ -15,6 +15,9 @@ import com.example.androidstudy.Chapter13Activity;
 import com.example.androidstudy.Chapter16Activity;
 import com.example.androidstudy.Chapter17Activity;
 import com.example.androidstudy.Chapter19Activity;
+import com.example.androidstudy.Chapter20Activity;
+import com.example.androidstudy.Chapter21Activity;
+import com.example.androidstudy.Chapter25Activity;
 import com.example.androidstudy.Chapter4Activity;
 import com.example.androidstudy.Chapter5Activity;
 import com.example.androidstudy.Chapter6Activity;
@@ -82,6 +85,18 @@ public class MainActivityAdapter extends RecyclerView.Adapter<Holder> {
                     break;
                 case 9:
                     intent = new Intent(v.getContext(), Chapter19Activity.class);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 10:
+                    intent = new Intent(v.getContext(), Chapter20Activity.class);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 11:
+                    intent = new Intent(v.getContext(), Chapter21Activity.class);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 12:
+                    intent = new Intent(v.getContext(), Chapter25Activity.class);
                     v.getContext().startActivity(intent);
                     break;
             }

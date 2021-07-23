@@ -5,31 +5,37 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.androidstudy.Adapter.Chapter4Adapter;
+import com.example.androidstudy.Adapter.Chapter21Adapter;
+import com.example.androidstudy.Adapter.Chapter25Adapter;
 
 import java.util.ArrayList;
 
-public class Chapter4Activity extends AppCompatActivity {
+public class Chapter25Activity extends Activity {
     ArrayList<String> list;
     TextView textView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chapter_sample);
+
         textView = findViewById(R.id.textView);
+        textView.setText("Chapter25 - 파일");
 
-        textView.setText("Chapter4 - 뷰");
         list = new ArrayList<>();
-        list.add("1 - ButtonEdit");
+        list.add("1 - File");
+        list.add("2 - File");
+        list.add("3 - 프레퍼런스");
 
-        Chapter4Adapter adapter = new Chapter4Adapter(list);
+        Chapter25Adapter adapter = new Chapter25Adapter(list);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+
+
     }
 }
