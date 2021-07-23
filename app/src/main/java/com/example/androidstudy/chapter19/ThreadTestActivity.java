@@ -13,7 +13,7 @@ import com.example.androidstudy.R;
 public class ThreadTestActivity extends Activity implements View.OnClickListener {
     int mMainValue = 0;
     int mBackValue = 0;
-    TextView mMainText,mBackText;
+    TextView mMainText, mBackText;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class TestFragActivity extends AppCompatActivity {
     ViewPager viewPager;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +36,7 @@ public class TestFragActivity extends AppCompatActivity {
         viewPager.setCurrentItem(0);
 
         View.OnClickListener movePageListener = v -> {
-            int tag = (int)v.getTag();
+            int tag = (int) v.getTag();
             viewPager.setCurrentItem(tag);
         };
         btnFirst.setOnClickListener(movePageListener);

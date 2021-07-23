@@ -54,7 +54,7 @@ public class ANR2Activity extends Activity implements View.OnClickListener {
     public Handler mCompleteHandler = new Handler(Looper.getMainLooper()) {
         public void handleMessage(Message msg) {
             bUploading = false;
-            Toast.makeText(ANR2Activity.this,"finish upload",Toast.LENGTH_SHORT).show();
+            Toast.makeText(ANR2Activity.this, "finish upload", Toast.LENGTH_SHORT).show();
         }
     };
 

@@ -3,18 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <EditText
+        android:id="@+id/str_edit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/str_edit"/>
+        android:layout_height="wrap_content" />
+
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/btn_ok"
-        android:text="ok"/>
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="cancel"
-        android:id="@+id/btn_cancel"/>
+        android:text="ok" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cancel" />
 </LinearLayout>

@@ -21,17 +21,18 @@ public class PrefTestActivity extends Activity {
         textName = findViewById(R.id.name);
         textStNum = findViewById(R.id.stnum);
 
-        SharedPreferences pref = getSharedPreferences("PrefTest",0);
-        String name = pref.getString("name","이름 없음");
+        SharedPreferences pref = getSharedPreferences("PrefTest", 0);
+        String name = pref.getString("name", "이름 없음");
         textName.setText(name);
 
-        int stNum = pref.getInt("stNum",20101234);
+        int stNum = pref.getInt("stNum", 20101234);
         textStNum.setText("" + stNum);
 
     }
+
     public void onPause() {
         super.onPause();
-        SharedPreferences pref = getSharedPreferences("PrefTest" ,0);
+        SharedPreferences pref = getSharedPreferences("PrefTest", 0);
         SharedPreferences.Editor edit = pref.edit();
 
         String name = textName.getText().toString();
@@ -41,8 +42,8 @@ public class PrefTestActivity extends Activity {
         } catch (Exception e) {
 
         }
-        edit.putString("name",name);
-        edit.putInt("stNum",stNum);
+        edit.putString("name", name);
+        edit.putInt("stNum", stNum);
         edit.commit();
     }
 

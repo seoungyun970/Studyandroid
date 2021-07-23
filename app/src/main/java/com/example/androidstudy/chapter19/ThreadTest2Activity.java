@@ -13,7 +13,7 @@ import com.example.androidstudy.R;
 public class ThreadTest2Activity extends Activity implements View.OnClickListener {
     int mMainValue = 0;
     int mBackValue = 0;
-    TextView mMainText,mBackText;
+    TextView mMainText, mBackText;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class ThreadTest2Activity extends Activity implements View.OnClickListene
     class BackRunnable implements Runnable {
         public void run() {
             while (true) {
-                mBackValue ++;
+                mBackValue++;
                 try {
                     Thread.sleep(1000);
                 } catch (Exception e) {

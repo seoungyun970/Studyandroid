@@ -78,7 +78,6 @@ public class LooperTestActivity extends Activity implements View.OnClickListener
     };
 
 
-
     class CalcThread extends Thread {
         Handler mMainHandler;
         Handler mBackHandler;
@@ -111,7 +110,7 @@ public class LooperTestActivity extends Activity implements View.OnClickListener
 
                             }
                             retmsg.what = 1;
-                            retmsg.obj = new Double(Math.sqrt((double)msg.arg1));
+                            retmsg.obj = new Double(Math.sqrt((double) msg.arg1));
                             break;
                     }
                     mMainHandler.sendMessage(retmsg);

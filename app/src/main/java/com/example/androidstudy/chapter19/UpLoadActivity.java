@@ -15,6 +15,7 @@ import com.example.androidstudy.R;
 
 public class UpLoadActivity extends Activity implements View.OnClickListener {
     Button mBtn;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,13 +40,13 @@ public class UpLoadActivity extends Activity implements View.OnClickListener {
     }
 
     void doUpload() {
-        for (int i = 0 ; i < 20 ; i++) {
+        for (int i = 0; i < 20; i++) {
             try {
                 Thread.sleep(100);
             } catch (Exception e) {
 
             }
-            Toast.makeText(this,"업로드를 완료", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "업로드를 완료", Toast.LENGTH_SHORT).show();
         }
     }
 }

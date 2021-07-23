@@ -2,24 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_gravity="center_horizontal"
-    android:background="#ffff00">
+    android:background="#ffff00"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/tv_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_counter"
         android:text="0"
-        android:textSize="40dp"
-        />
+        android:textSize="40dp" />
 
     <Button
+        android:id="@+id/btn_crease"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_crease"
-        android:text="Increase"
-        />
+        android:text="Increase" />
 
 
 </LinearLayout>

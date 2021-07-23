@@ -34,14 +34,14 @@ public class LongTime2Activity extends Activity implements View.OnClickListener 
         new accumulateTask().execute(100);
     }
 
-    private class accumulateTask extends AsyncTask<Integer,Integer,Integer> {
+    private class accumulateTask extends AsyncTask<Integer, Integer, Integer> {
 
         @Override
         protected Integer doInBackground(Integer... arg0) {
             while (isCancelled() == false) {
                 mValue++;
                 if (mValue <= 100) {
-                   publishProgress(mValue);
+                    publishProgress(mValue);
                 } else {
                     break;
                 }

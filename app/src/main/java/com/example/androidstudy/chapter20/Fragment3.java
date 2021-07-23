@@ -23,7 +23,7 @@ public class Fragment3 extends Fragment {
     @org.jetbrains.annotations.Nullable
     @Override
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-        RelativeLayout layout = (RelativeLayout)inflater.inflate(R.layout.fragment_third,container,false);
+        RelativeLayout layout = (RelativeLayout) inflater.inflate(R.layout.fragment_third, container, false);
         return layout;
     }
 }

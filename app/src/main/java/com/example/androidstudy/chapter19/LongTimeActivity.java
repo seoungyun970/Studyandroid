@@ -41,6 +41,7 @@ public class LongTimeActivity extends Activity implements View.OnClickListener {
 //        upDate();
         dialog();
     }
+
     public void dialog() {
         builder = new AlertDialog.Builder(this);
         builder.setTitle("Updating")
@@ -55,7 +56,7 @@ public class LongTimeActivity extends Activity implements View.OnClickListener {
         mHandler.sendEmptyMessage(0);
     }
 
-//    public void upDate() {
+    //    public void upDate() {
 //        for (int i = 0 ; i < 100 ; i++ ) {
 //            mValue++ ;
 //            mText.setText(Integer.toString(mValue));
@@ -69,7 +70,7 @@ public class LongTimeActivity extends Activity implements View.OnClickListener {
 //    }
     Handler mHandler = new Handler(Looper.getMainLooper()) {
         public void handleMessage(Message msg) {
-            mValue ++;
+            mValue++;
             mText.setText(Integer.toString(mValue));
             try {
                 Thread.sleep(50);

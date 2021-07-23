@@ -40,7 +40,7 @@ public class FileExplorer extends Activity implements AdapterView.OnItemClickLis
         mRoot = Environment.getExternalStorageDirectory().getAbsolutePath();
         mCurrent = mRoot;
 
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,arFiles);
+        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arFiles);
         mFileList.setAdapter(mAdapter);
         mFileList.setOnItemClickListener(this);
 
@@ -54,17 +54,17 @@ public class FileExplorer extends Activity implements AdapterView.OnItemClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnroot:
-                if(mCurrent.compareTo(mRoot) != 0) {
+                if (mCurrent.compareTo(mRoot) != 0) {
                     mCurrent = mRoot;
                     refreshFiles();
                 }
                 break;
             case R.id.btnup:
                 if (mCurrent.compareTo(mRoot) != 0) {
-                   int end = mCurrent.lastIndexOf("/");
-                   String uppath = mCurrent.substring(0,end);
-                   mCurrent = uppath;
-                   refreshFiles();
+                    int end = mCurrent.lastIndexOf("/");
+                    String uppath = mCurrent.substring(0, end);
+                    mCurrent = uppath;
+                    refreshFiles();
                 }
                 break;
         }
@@ -73,32 +73,33 @@ public class FileExplorer extends Activity implements AdapterView.OnItemClickLis
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         String name = arFiles.get(position);
-        if(name.startsWith("[") && name.endsWith("]")) {
-            name = name.substring(1,name.length() - 1);
+        if (name.startsWith("[") && name.endsWith("]")) {
+            name = name.substring(1, name.length() - 1);
         }
         String path = mCurrent + "/" + name;
         File f = new File(path);
 
-        if(f.isDirectory()) {
+        if (f.isDirectory()) {
             mCurrent = path;
             refreshFiles();
         } else {
-            Toast.makeText(FileExplorer.this,arFiles.get(position),Toast.LENGTH_SHORT).show();
+            Toast.makeText(FileExplorer.this, arFiles.get(position), Toast.LENGTH_SHORT).show();
         }
     }
+
     public void refreshFiles() {
         mCurrentTxt.setText(mCurrent);
         arFiles.clear();
 
         File current = new File(mCurrent);
-        String [] files = current.list();
+        String[] files = current.list();
         if (files != null) {
-            for (int i = 0; i <files.length; i++) {
-                String path = mCurrent + "/" +files[i];
+            for (int i = 0; i < files.length; i++) {
+                String path = mCurrent + "/" + files[i];
                 String name = "";
                 File f = new File(path);
                 if (f.isDirectory()) {
-                    name = "[" + files[i] + "]" ;
+                    name = "[" + files[i] + "]";
                 } else {
                     name = files[i];
                 }

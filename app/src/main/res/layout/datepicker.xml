@@ -5,21 +5,22 @@
     android:orientation="vertical">
 
     <DatePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/date_picker"
-        android:calendarViewShown="false"
-        android:datePickerMode="spinner"/>
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
+    <TextView
         android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="date"
-        android:textSize="8dp"/>
+        android:textSize="8dp" />
 
     <Button
+        android:id="@+id/btn_now"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_now"
-        android:text="선택한 날짜 조사"/>
+        android:text="선택한 날짜 조사" />
 </LinearLayout>

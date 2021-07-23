@@ -16,8 +16,9 @@ import com.example.androidstudy.R;
 public class HandlerActivity extends Activity implements View.OnClickListener {
     int mMainValue = 0;
     int mBackValue = 0;
-    TextView mMainText,mBackText;
+    TextView mMainText, mBackText;
     Handler mHandler;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +36,7 @@ public class HandlerActivity extends Activity implements View.OnClickListener {
 
         mHandler = new Handler(Looper.getMainLooper()) {
             public void handleMessage(Message msg) {
-                if(msg.what == 0) {
+                if (msg.what == 0) {
                     mBackText.setText("BackValue : " + mBackValue);
                 }
             }
@@ -56,12 +57,12 @@ public class HandlerActivity extends Activity implements View.OnClickListener {
 
         public void run() {
             while (true) {
-                mBackValue ++;
+                mBackValue++;
                 Message msg = new Message();
                 msg.what = 0;
                 msg.arg1 = mBackValue;
                 mHandler.sendMessage(msg);
-                try{
+                try {
                     Thread.sleep(1000);
                 } catch (Exception e) {
 
