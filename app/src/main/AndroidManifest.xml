@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidstudy">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -79,6 +80,34 @@
         <activity android:name=".chapter25.FileActivity"/>
         <activity android:name=".chapter25.FileExplorer"/>
         <activity android:name=".chapter25.PrefTestActivity"/>
+        <activity android:name=".Chapter26Activity"/>
+        <activity android:name=".chapter26.EnglishWordActivity"/>
+        <activity android:name=".chapter26.ProductListActivity"/>
+        <activity android:name=".Chapter28Activity"/>
+        <activity android:name=".chapter28.ConMgrActivity"/>
+        <activity android:name=".chapter28.DownHtmlActivity"/>
+        <activity android:name=".chapter28.AsyncDownHtml"/>
+        <activity android:name=".chapter28.DownImage"/>
+        <activity android:name=".chapter28.Downlmage2"/>
+        <activity android:name=".chapter28.DownloadManagerActivity"/>
+        <activity android:name=".chapter28.JSONArrayActivity"/>
+        <activity android:name=".Chapter29Activity"/>
+        <activity android:name=".chapter29.NapAlarm"/>
+        <activity android:name=".chapter29.NapEnd"/>
+        <activity android:name=".chapter29.DetectFreeActivity"/>
+        <activity android:name=".chapter29.OnSaveZone"/>
+        <activity android:name=".Chapter30Activity"/>
+        <service android:name=".chapter30.NewsService" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.RESPOND_VIA_MESSAGE"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".BroadcastRecevier.FreeBR">
+            <intent-filter>
+                <action android:name=".chapter29.NapEnd"/>
+            </intent-filter>
+        </receiver>
     </application>
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />

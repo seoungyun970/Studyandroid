@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
         list.add("chapter20 - 프래그먼트");
         list.add("chapter21 - 액션바");
         list.add("chapter25 - 파일");
+        list.add("chapter26 - SQLITE");
+        list.add("chapter28 - 네트워크");
+//        list.add("chapter29 - Broadcast_Receiver");
+        list.add("chapter30 - Service");
 
         MainActivityAdapter adapter = new MainActivityAdapter(list);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
