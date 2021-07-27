@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         list.add("chapter28 - 네트워크");
 //        list.add("chapter29 - Broadcast_Receiver");
         list.add("chapter30 - Service");
+        list.add("chapter32 - Gps");
+
 
         MainActivityAdapter adapter = new MainActivityAdapter(list);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);

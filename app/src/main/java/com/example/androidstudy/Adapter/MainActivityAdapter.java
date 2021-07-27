@@ -22,6 +22,7 @@ import com.example.androidstudy.Chapter26Activity;
 import com.example.androidstudy.Chapter28Activity;
 import com.example.androidstudy.Chapter29Activity;
 import com.example.androidstudy.Chapter30Activity;
+import com.example.androidstudy.Chapter32Activity;
 import com.example.androidstudy.Chapter4Activity;
 import com.example.androidstudy.Chapter5Activity;
 import com.example.androidstudy.Chapter6Activity;
@@ -115,6 +116,9 @@ public class MainActivityAdapter extends RecyclerView.Adapter<Holder> {
                     intent = new Intent(v.getContext(), Chapter30Activity.class);
                     v.getContext().startActivity(intent);
                     break;
+                case 16:
+                    intent = new Intent(v.getContext(), Chapter32Activity.class);
+                    v.getContext().startActivity(intent);
             }
 
         });

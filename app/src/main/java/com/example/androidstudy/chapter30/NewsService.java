@@ -4,6 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.os.Message;
 import android.widget.MediaController;
 import android.widget.Toast;
@@ -61,14 +62,14 @@ public class NewsService extends Service {
                 msg.obj = arNews[idx % arNews.length];
                 mHandler.sendMessage(msg);
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(1000);
                 } catch (Exception e) {
 
                 }
             }
         }
     }
-    Handler mHandler = new Handler() {
+    Handler mHandler = new Handler(Looper.getMainLooper()) {
         @Override
         public void handleMessage(@NonNull Message msg) {
             if(msg.what == 0) {

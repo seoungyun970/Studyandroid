@@ -8,12 +8,12 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.androidstudy.Adapter.Chapter28Adapter;
 import com.example.androidstudy.Adapter.Chapter30Adapter;
+import com.example.androidstudy.Adapter.Chapter32Adapter;
 
 import java.util.ArrayList;
 
-public class Chapter30Activity extends Activity {
+public class Chapter32Activity extends Activity {
     ArrayList<String> list;
     TextView textView;
 
@@ -23,16 +23,17 @@ public class Chapter30Activity extends Activity {
         setContentView(R.layout.chapter_sample);
 
         textView = findViewById(R.id.textView);
-        textView.setText("Chapter30 - 서비스(작업중)");
+        textView.setText("Chapter32 - gps");
 
         list = new ArrayList<>();
-        list.add("1 - service");
-        list.add("2 - service(비동기)");
-        list.add("3 - service(Binder)");
+        list.add("1 - gps");
+        list.add("2 - gpsProvider");
+        list.add("3 - readlocation");
+        list.add("4 - geocoding");
 
 
 
-        Chapter30Adapter adapter = new Chapter30Adapter(list);
+        Chapter32Adapter adapter = new Chapter32Adapter(list);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
