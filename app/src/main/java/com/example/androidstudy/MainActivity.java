@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
 //        list.add("chapter29 - Broadcast_Receiver");
         list.add("chapter30 - Service");
         list.add("chapter32 - Gps");
+        list.add("chapter33 - SharedPerferences");
+        list.add("chapter34 - Retrofit");
 
 
         MainActivityAdapter adapter = new MainActivityAdapter(list);

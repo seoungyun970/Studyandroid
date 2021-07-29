@@ -108,6 +108,12 @@
         <activity android:name=".GetProvider"/>
         <activity android:name=".ReadLocationActivity"/>
         <activity android:name=".GeoCodingActivity"/>
+        <activity android:name=".Chapter33Activity"/>
+        <activity android:name=".chapter33.SimpleSharedPreferences"/>
+        <activity android:name=".chapter33.LoginActivity"/>
+        <activity android:name=".chapter33.SubActivity"/>
+        <activity android:name=".Chapter34Activity"/>
+        <activity android:name=".Adapter.chapter34.LoginRetrofitActivity"/>
         <service android:name=".chapter30.CalcService" android:enabled="true"/>
         <service android:name=".chapter30.NewsService2" android:enabled="true">
             <intent-filter>
