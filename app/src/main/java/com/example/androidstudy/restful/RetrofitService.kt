@@ -9,5 +9,5 @@ interface RetrofitService {
     @POST(RequestUrl.LOGIN)
     fun login(
         @Body parameters : User
-    ) : Call<UserModel>
+    ) : Call<ApiModel>
 }

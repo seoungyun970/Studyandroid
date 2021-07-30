@@ -4,7 +4,7 @@ import com.google.gson.JsonElement
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-data class UserModel (
+data class ApiModel (
     @SerializedName("ResultCode")
     var resultCode: Int = -1,
 

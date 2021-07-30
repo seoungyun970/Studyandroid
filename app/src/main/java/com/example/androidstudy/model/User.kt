@@ -16,4 +16,4 @@ data class User(
     @SerializedName("ip") var ip: String = "",
     @SerializedName("app_id") var app_id: String = "QUICK",
     @SerializedName("nation_cd") var nation_cd: String = "SG",
-    )
+)
