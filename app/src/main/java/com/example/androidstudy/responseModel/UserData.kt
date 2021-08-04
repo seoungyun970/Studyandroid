@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 data class UserData(
-    @SerializedName("OpNO") var OpNo : String,
+    @SerializedName("OpNo") var OpNo : String,
     @SerializedName("OpId") var OpId : String,
     @SerializedName("OpNm") var OpNm : String,
     @SerializedName("OpType") var OpType : String,

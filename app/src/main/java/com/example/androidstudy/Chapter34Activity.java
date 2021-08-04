@@ -27,7 +27,7 @@ public class Chapter34Activity extends Activity {
 
         list = new ArrayList<>();
         list.add("1 - LoginActivityRetrofit");
-        list.add("2 - login-loginOut");
+        list.add("2 - Corountine");
 
         Chapter34Adapter adapter = new Chapter34Adapter(list);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);

@@ -9,10 +9,10 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.androidstudy.Adapter.chapter34.LoginRetrofitActivity;
+import com.example.androidstudy.chapter34.CoroutineSimple;
+import com.example.androidstudy.chapter34.LoginRetrofitActivity;
 import com.example.androidstudy.R;
 import com.example.androidstudy.chapter33.LoginActivity;
-import com.example.androidstudy.chapter33.SimpleSharedPreferences;
 
 import java.util.ArrayList;
 
@@ -42,7 +42,7 @@ public class Chapter34Adapter extends RecyclerView.Adapter<com.example.androidst
                     v.getContext().startActivity(intent);
                     break;
                 case 1:
-                    intent = new Intent(v.getContext(), LoginActivity.class);
+                    intent = new Intent(v.getContext(), CoroutineSimple.class);
                     v.getContext().startActivity(intent);
                     break;
             }

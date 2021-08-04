@@ -169,7 +169,7 @@ class LoginRetrofitActivity : Activity(), View.OnClickListener {
 
     private fun jsonArrayCheck() {
 
-        val checkJsonArrayCoroutineScope = CoroutineScope(Dispatchers.IO)
+        val checkJsonArrayCoroutineScope = CoroutineScope(Dispatchers.Main)
         coroutineScopeList.add(checkJsonArrayCoroutineScope)
 
         checkJsonArrayCoroutineScope.launch {
@@ -177,6 +177,7 @@ class LoginRetrofitActivity : Activity(), View.OnClickListener {
                 val req = WorkSchedule(
                     "2021-08-02", "2021-08-03"
                 )
+
                 val response = IApi.jsonArrayCheck(req).execute()
                 if (response.isSuccessful) {
                     withContext(Dispatchers.Main) {
@@ -185,6 +186,7 @@ class LoginRetrofitActivity : Activity(), View.OnClickListener {
                             "JsonArray Success",
                             Toast.LENGTH_SHORT
                         ).show()
+
                     }
                     val jsonArrayData = response.body()
                     jsonArrayData?.let {
@@ -241,7 +243,7 @@ class LoginRetrofitActivity : Activity(), View.OnClickListener {
                     "37.499756", "127.032454"
                 )
 
-                val response = IApi.suspendLogin(req).execute()
+                val response = IApi.login(req).execute()
                 if (response.isSuccessful) {
                     withContext(Dispatchers.Main) {
                         // Dispatchers.Main 은 말그대로 메인쓰레드에 대한 Context 이며 UI 갱신이나 Toast 등의 View 작업에 사용

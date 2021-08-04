@@ -113,7 +113,8 @@
         <activity android:name=".chapter33.LoginActivity"/>
         <activity android:name=".chapter33.SubActivity"/>
         <activity android:name=".Chapter34Activity"/>
-        <activity android:name=".Adapter.chapter34.LoginRetrofitActivity"/>
+        <activity android:name="com.example.androidstudy.chapter34.LoginRetrofitActivity"/>
+        <activity android:name=".chapter34.CoroutineSimple"/>
         <service android:name=".chapter30.CalcService" android:enabled="true"/>
         <service android:name=".chapter30.NewsService2" android:enabled="true">
             <intent-filter>

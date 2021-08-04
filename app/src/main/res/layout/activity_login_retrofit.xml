@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Adapter.chapter34.LoginRetrofitActivity">
+    tools:context=".chapter34.LoginRetrofitActivity">
 
     <EditText
         android:id="@+id/tv_id"
@@ -25,6 +25,14 @@
         app:layout_constraintTop_toBottomOf="@id/tv_id"
         android:textSize="20dp"
         android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_jsonArray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="jsonArray"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login" />
 
     <Button
         android:layout_width="match_parent"
