@@ -1,13 +1,12 @@
-package com.example.androidstudy.restful
+package com.example.androidstudy.chapter34.restful
 
 import android.content.ContentValues.TAG
 import android.util.Log
-import com.example.androidstudy.restful.RequestUrl.Companion.BASE_URL
+import com.example.androidstudy.chapter34.restful.RequestUrl.Companion.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
 
 
 object RetrofitClient {

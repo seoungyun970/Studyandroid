@@ -1,8 +1,6 @@
-package com.example.androidstudy.model
+package com.example.androidstudy.chapter34.model
 
 import com.google.gson.annotations.SerializedName
-import retrofit2.http.Field
-import java.io.Serializable
 
 data class User(
     @SerializedName("login_id") var login_id: String,

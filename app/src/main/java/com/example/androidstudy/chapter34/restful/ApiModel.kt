@@ -1,8 +1,7 @@
-package com.example.androidstudy.restful
+package com.example.androidstudy.chapter34.restful
 
 import com.google.gson.JsonElement
 import com.google.gson.annotations.SerializedName
-import java.io.Serializable
 
 data class ApiModel (
     @SerializedName("ResultCode")

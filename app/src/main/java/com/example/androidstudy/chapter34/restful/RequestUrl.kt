@@ -1,4 +1,4 @@
-package com.example.androidstudy.restful
+package com.example.androidstudy.chapter34.restful
 
 class RequestUrl {
     companion object {

@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("chapter32 - Gps");
         list.add("chapter33 - SharedPerferences");
         list.add("chapter34 - Retrofit");
-
+        list.add("chapter35 - LiveData");
 
         MainActivityAdapter adapter = new MainActivityAdapter(list);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);

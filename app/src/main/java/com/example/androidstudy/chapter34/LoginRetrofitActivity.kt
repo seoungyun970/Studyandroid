@@ -2,19 +2,22 @@ package com.example.androidstudy.chapter34
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.androidstudy.R
+import com.example.androidstudy.chapter34.database.UserDataDao
+import com.example.androidstudy.chapter34.database.UserDatabase
 import com.example.androidstudy.listener.SingleClickListener
-import com.example.androidstudy.model.User
-import com.example.androidstudy.model.WorkSchedule
-import com.example.androidstudy.responseModel.JsonArrayData
-import com.example.androidstudy.responseModel.UserData
-import com.example.androidstudy.restful.ApiModel
-import com.example.androidstudy.restful.RetrofitClient
-import com.example.androidstudy.restful.RetrofitService
+import com.example.androidstudy.chapter34.model.User
+import com.example.androidstudy.chapter34.model.WorkSchedule
+import com.example.androidstudy.chapter34.responseModel.JsonArrayData
+import com.example.androidstudy.chapter34.responseModel.UserData
+import com.example.androidstudy.chapter34.restful.ApiModel
+import com.example.androidstudy.chapter34.restful.RetrofitClient
+import com.example.androidstudy.chapter34.restful.RetrofitService
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_login_retrofit.*
@@ -33,6 +36,7 @@ class LoginRetrofitActivity : Activity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_login_retrofit)
 
         IApi = RetrofitClient.getInstance().create(RetrofitService::class.java)
@@ -88,11 +92,12 @@ class LoginRetrofitActivity : Activity(), View.OnClickListener {
                         // resultObject 값이 JsonObject 형태를 가지는데 Gson은 key/value 자동매핑 지원한다
                         Log.d("data >> ", data.toString())
 
-                        Log.d("data.OpNo >> ", data.OpNo)
+                        Log.d("data.OpNo >> ", data.OpNo.toString())
                         Log.d("data.OpId >> ", data.OpId)
                         Log.d("data.OpNm >> ", data.OpNm)
                         Log.d("data.OfficeCode >> ", data.OfficeCode)
                         Log.d("data.OfficeName >> ", data.OfficeName)
+
                     }
 
                 } else {
@@ -169,13 +174,13 @@ class LoginRetrofitActivity : Activity(), View.OnClickListener {
 
     private fun jsonArrayCheck() {
 
-        val checkJsonArrayCoroutineScope = CoroutineScope(Dispatchers.Main)
+        val checkJsonArrayCoroutineScope = CoroutineScope(Dispatchers.IO)
         coroutineScopeList.add(checkJsonArrayCoroutineScope)
 
         checkJsonArrayCoroutineScope.launch {
             try {
                 val req = WorkSchedule(
-                    "2021-08-02", "2021-08-03"
+                    "2021-08-07", "2021-08-09"
                 )
 
                 val response = IApi.jsonArrayCheck(req).execute()
@@ -186,18 +191,19 @@ class LoginRetrofitActivity : Activity(), View.OnClickListener {
                             "JsonArray Success",
                             Toast.LENGTH_SHORT
                         ).show()
-
                     }
+
                     val jsonArrayData = response.body()
                     jsonArrayData?.let {
-                        Log.d("it.resultObject >>",it.resultObject.toString())
-                        val data : ArrayList<JsonArrayData> = Gson().fromJson(it.resultObject,object : TypeToken<ArrayList<JsonArrayData>>() {}.type)
+                        Log.e("it.resultObject >>",it.resultObject.toString())
+                        val data : ArrayList<JsonArrayData> = Gson().fromJson(it.resultObject,
+                            object : TypeToken<ArrayList<JsonArrayData>>() {}.type)
 
                         val simpleData = Gson().fromJson(it.resultObject,Array<JsonArrayData>::class.java).toList()
 
-                        Log.d("simpleData >>",simpleData[0].onoff)
-                        Log.d("simpleData >>",simpleData[0].date)
-                        Log.d("simpleData >>",simpleData[0].driver_id)
+                        Log.e("simpleData >>",simpleData[0].onoff)
+                        Log.e("simpleData >>",simpleData[0].date)
+                        Log.e("simpleData >>",simpleData[0].driver_id)
 
                         Log.d("data >> ", data.get(0).onoff)
                         Log.d("data >> ", data.get(0).date)
@@ -211,7 +217,8 @@ class LoginRetrofitActivity : Activity(), View.OnClickListener {
                             response.code(),
                             Toast.LENGTH_SHORT
                         ).show()
-                        Log.d("response.code() >>>>>", response.code().toString() + " I'm working in thread " + Thread.currentThread().name)
+                        Log.d("response.code() >>>>>", response.code().toString() +
+                                " I'm working in thread " + Thread.currentThread().name)
                     }
                 }
 
@@ -264,8 +271,10 @@ class LoginRetrofitActivity : Activity(), View.OnClickListener {
                         val data = Gson().fromJson(it.resultObject, UserData::class.java)
                         // resultObject 값이 JsonObject 형태를 가지는데 Gson은 key/value 자동매핑 지원한다
                         Log.d("data >> ", data.toString())
-
-                        Log.d("data.OpNo >> ", data.OpNo)
+                        UserDatabase.getInstance(this@LoginRetrofitActivity).userDataDao.insert(data)
+                        val intent = Intent(this@LoginRetrofitActivity,MainMenuActivity::class.java)
+                        startActivity(intent)
+                        Log.d("data.OpNo >> ", data.OpNo.toString())
                         Log.d("data.OpId >> ", data.OpId)
                         Log.d("data.OpNm >> ", data.OpNm)
                         Log.d("data.OfficeCode >> ", data.OfficeCode)

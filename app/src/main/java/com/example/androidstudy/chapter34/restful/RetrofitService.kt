@@ -1,7 +1,7 @@
-package com.example.androidstudy.restful
+package com.example.androidstudy.chapter34.restful
 
-import com.example.androidstudy.model.WorkSchedule
-import com.example.androidstudy.model.User
+import com.example.androidstudy.chapter34.model.WorkSchedule
+import com.example.androidstudy.chapter34.model.User
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -9,9 +9,9 @@ import retrofit2.http.POST
 interface RetrofitService {
 
     @POST(RequestUrl.LOGIN)
-    suspend fun login(
+    fun login(
         @Body parameters : User
-    ) : ApiModel
+    ) : Call<ApiModel>
 
     @POST(RequestUrl.JSONARRAYCHECK)
     fun jsonArrayCheck(

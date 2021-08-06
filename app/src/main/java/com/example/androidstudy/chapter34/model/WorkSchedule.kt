@@ -1,7 +1,6 @@
-package com.example.androidstudy.model
+package com.example.androidstudy.chapter34.model
 
 import com.google.gson.annotations.SerializedName
-import retrofit2.http.Field
 
 data class WorkSchedule (
     @SerializedName("s_date") var s_date: String,

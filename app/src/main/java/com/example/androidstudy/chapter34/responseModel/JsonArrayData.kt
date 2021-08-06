@@ -1,8 +1,6 @@
-package com.example.androidstudy.responseModel
+package com.example.androidstudy.chapter34.responseModel
 
 import com.google.gson.annotations.SerializedName
-import java.util.*
-import kotlin.collections.ArrayList
 
 data class JsonArrayData(
     @SerializedName("driver_id") var driver_id : String,
