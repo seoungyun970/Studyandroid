@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:gravity="right"
-            android:text="1"
+            android:text=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_id" />
@@ -51,7 +51,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:text="2"
+            android:text=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_pw" />

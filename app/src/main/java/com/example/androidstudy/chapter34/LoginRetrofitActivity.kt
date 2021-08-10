@@ -147,7 +147,6 @@ class LoginRetrofitActivity : Activity(), View.OnClickListener {
             override fun onResponse(call: Call<ApiModel>, response: Response<ApiModel>) {
                 Log.d("onResponse >>> ", response.body().toString() + " I'm working in thread " + Thread.currentThread().name)
                 Toast.makeText(this@LoginRetrofitActivity, "success", Toast.LENGTH_SHORT).show()
-
             }
 
             override fun onFailure(call: Call<ApiModel>, t: Throwable) {

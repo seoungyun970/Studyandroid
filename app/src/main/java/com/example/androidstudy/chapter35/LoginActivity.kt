@@ -66,10 +66,10 @@ class LoginActivity : AppCompatActivity() {
                  *
                  *
                  * */
-//                LocalDB.getInstance(this@LoginActivity).userDataDao.clear()
-//                withContext(Dispatchers.Main) {
-//                    Toast.makeText(this@LoginActivity, "DB Delete!!", Toast.LENGTH_SHORT).show()
-//                }
+                LocalDB.getInstance(this@LoginActivity).userDataDao.clears()
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@LoginActivity, "DB Delete!!", Toast.LENGTH_SHORT).show()
+                }
 
                 /**SQLite 사용
                  *
@@ -107,13 +107,9 @@ class LoginActivity : AppCompatActivity() {
             val user = id?.let {
                 LocalDB.getInstance(this@LoginActivity).userDataDao.get(it)
             }
-            println("user!!.id" + user?.id)
-            println("user!!.pw" + user?.pw)
-            println("id " + id)
-            println("pw " + pw)
-            println("user >>>" + user)
             val users = LocalDB.getInstance(this@LoginActivity).userDataDao.gets()
             println("users >>>" + users)
+
             if (user?.id.equals(id) && user?.pw.equals(pw)) {
                 withContext(Dispatchers.Main) {
                     Toast.makeText(this@LoginActivity, "Login Success", Toast.LENGTH_SHORT).show()

@@ -1,9 +1,9 @@
 package com.example.androidstudy.chapter35.SQLite
 
 import android.provider.BaseColumns
+import com.example.androidstudy.chapter35.database.User
 
 object UserDBStructure : BaseColumns {
-
     val TABLE_NAME = "users"
     val COLUMN_ID = "id"
     val COLUMN_PW = "pw"

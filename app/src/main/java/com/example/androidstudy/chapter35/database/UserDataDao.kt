@@ -18,9 +18,11 @@ interface UserDataDao {
     fun gets() : List<User>
 
     @Query("DELETE FROM user")
-    fun clear()
+    fun clears()
 
     @Query("SELECT * FROM user ORDER BY id DESC LIMIT 1")
     fun get() : User?
 
+    @Delete
+    fun deleteUser(vararg user : User)
 }

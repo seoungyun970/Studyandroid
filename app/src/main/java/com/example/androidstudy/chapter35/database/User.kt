@@ -11,3 +11,4 @@ data class User (
     @ColumnInfo(name = "pw")
     var pw : String
 )
+
