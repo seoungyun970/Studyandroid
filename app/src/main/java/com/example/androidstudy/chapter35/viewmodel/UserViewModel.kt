@@ -7,7 +7,8 @@ import com.example.androidstudy.chapter35.database.User
 import com.example.androidstudy.chapter35.database.UserDataDao
 
 
-class UserViewModel(val database: UserDataDao, application: Application) : AndroidViewModel(application) {
+class UserViewModel(val database: UserDataDao, application: Application) :
+    AndroidViewModel(application) {
 
     private val data = MutableLiveData<User?>()
     fun loginClick() {

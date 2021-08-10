@@ -6,15 +6,15 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 
-@Database(entities = [User::class],version = 1,exportSchema = false)
+@Database(entities = [User::class], version = 2, exportSchema = false)
 abstract class LocalDB : RoomDatabase() {
-    abstract val userDataDao : UserDataDao
+    abstract val userDataDao: UserDataDao
 
     companion object {
 
         @Volatile
-        private var INSTANCE : LocalDB? = null
-        fun getInstance(context: Context) : LocalDB {
+        private var INSTANCE: LocalDB? = null
+        fun getInstance(context: Context): LocalDB {
             synchronized(this) {
                 var instance = INSTANCE
 
