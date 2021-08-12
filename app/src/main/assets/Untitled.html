@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+var exam_script = {
+    showWebView : function(toast) {
+        alert(toast);
+    }
+}
+	function showAndroidToast(toast) {
+        var text = document.getElementById("text").value;
+        toast = text
+		showToast(toast);
+    }
+
+    function showEnCodeUri() {
+        var uri = document.getElementById("text1").value;
+        var res = encodeURI(uri);
+        alert(res);
+    }
+
+    function showDeCodeUri() {
+        var uri = document.getElementById("text2").value;
+        var encode = encodeURI(uri)
+        var decode = decodeURI(encode)
+        alert("encode : " + encode + "\n" + "decode : "+decode)
+    }
+
+</script>
+<H1>
+    안녕하세요 웹뷰 로딩 완료 했습니다!!!!
+</H1>
+<form>
+    <input type="text" size="12" id="text" value="">
+    <input type="button" value="버튼" onclick="showAndroidToast();">
+</form>
+<form>
+    <input type="text" size="12" id="text1" style="width:220px"
+           value="https://www.naver.com/큐익스프레스">
+    <input type="button" value="enCodeUrl" onclick="showEnCodeUri();">
+</form>
+
+<form>
+    <input type="text" size="12" id="text2" style="width:220px"
+           value="https://www.naver.com/큐익스프레스">
+    <input type="button" value="deCodeUrl" onclick="showDeCodeUri();">
+</form>
+
+</body>
+</html>
+

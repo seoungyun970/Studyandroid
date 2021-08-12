@@ -9,12 +9,12 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.androidstudy.Adapter.Chapter34Adapter;
 import com.example.androidstudy.Adapter.Chapter35Adapter;
+import com.example.androidstudy.Adapter.Chapter36Adapter;
 
 import java.util.ArrayList;
 
-public class Chapter35Activity extends Activity {
+public class Chapter36Activity extends Activity {
     ArrayList<String> list;
     TextView textView;
 
@@ -25,12 +25,12 @@ public class Chapter35Activity extends Activity {
         setContentView(R.layout.chapter_sample);
 
         textView = findViewById(R.id.textView);
-        textView.setText("Chapter35 - Database");
+        textView.setText("Chapter36 - WebView");
 
         list = new ArrayList<>();
-        list.add("1 - LoginActivity with (Room,SQLite)");
+        list.add("1 - WebView");
 
-        Chapter35Adapter adapter = new Chapter35Adapter(list);
+        Chapter36Adapter adapter = new Chapter36Adapter(list);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

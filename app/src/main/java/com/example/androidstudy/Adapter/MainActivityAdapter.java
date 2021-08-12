@@ -26,6 +26,8 @@ import com.example.androidstudy.Chapter32Activity;
 import com.example.androidstudy.Chapter33Activity;
 import com.example.androidstudy.Chapter34Activity;
 import com.example.androidstudy.Chapter35Activity;
+import com.example.androidstudy.Chapter36Activity;
+import com.example.androidstudy.Chapter37Activity;
 import com.example.androidstudy.Chapter4Activity;
 import com.example.androidstudy.Chapter5Activity;
 import com.example.androidstudy.Chapter6Activity;
@@ -59,80 +61,88 @@ public class MainActivityAdapter extends RecyclerView.Adapter<Holder> {
                     intent = new Intent(v.getContext(), Chapter4Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 1:
+                case 1 :
                     intent = new Intent(v.getContext(), Chapter5Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 2:
+                case 2 :
                     intent = new Intent(v.getContext(), Chapter6Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 3:
+                case 3 :
                     intent = new Intent(v.getContext(), Chapter7Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 4:
+                case 4 :
                     intent = new Intent(v.getContext(), Chapter11Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 5:
+                case 5 :
                     intent = new Intent(v.getContext(), Chapter12Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 6:
+                case 6 :
                     intent = new Intent(v.getContext(), Chapter13Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 7:
+                case 7 :
                     intent = new Intent(v.getContext(), Chapter16Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 8:
+                case 8 :
                     intent = new Intent(v.getContext(), Chapter17Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 9:
+                case 9 :
                     intent = new Intent(v.getContext(), Chapter19Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 10:
+                case 10 :
                     intent = new Intent(v.getContext(), Chapter20Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 11:
+                case 11 :
                     intent = new Intent(v.getContext(), Chapter21Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 12:
+                case 12 :
                     intent = new Intent(v.getContext(), Chapter25Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 13:
+                case 13 :
                     intent = new Intent(v.getContext(), Chapter26Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 14:
+                case 14 :
                     intent = new Intent(v.getContext(), Chapter28Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 15:
+                case 15 :
                     intent = new Intent(v.getContext(), Chapter30Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 16:
+                case 16 :
                     intent = new Intent(v.getContext(), Chapter32Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 17:
+                case 17 :
                     intent = new Intent(v.getContext(), Chapter33Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 18:
+                case 18 :
                     intent = new Intent(v.getContext(), Chapter34Activity.class);
                     v.getContext().startActivity(intent);
                     break;
-                case 19:
+                case 19 :
                     intent = new Intent(v.getContext(), Chapter35Activity.class);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 20 :
+                    intent = new Intent(v.getContext(), Chapter36Activity.class);
+                    v.getContext().startActivity(intent);
+                    break;
+                case 21 :
+                    intent = new Intent(v.getContext(), Chapter37Activity.class);
                     v.getContext().startActivity(intent);
                     break;
             }

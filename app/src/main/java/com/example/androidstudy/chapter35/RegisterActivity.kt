@@ -149,11 +149,11 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
     private fun passWordCheck(pw : String, confirmPw : String) : Boolean{
-        return if (pw.isEmpty()) {
+        return if (pw.isEmpty() && confirmPw.isEmpty()) {
             tv_id_format.setText("please enter your password.")
 //            Toast.makeText(this,"please enter your password.",Toast.LENGTH_SHORT).show()
             false
-        } else if (!checker.passWordCheck(pw)) {
+        } else if (!checker.passWordCheck(pw) && !checker.passWordCheck(confirmPw)) {
             tv_id_format.setText("It is not in password format")
 //            Toast.makeText(this,"It is not in password format",Toast.LENGTH_SHORT).show()
             false
@@ -161,8 +161,7 @@ class RegisterActivity : AppCompatActivity() {
             tv_id_format.setText("Passwords do not match")
 //            Toast.makeText(this,"Passwords do not match",Toast.LENGTH_SHORT).show()
             false
-        }
-        else {
+        } else {
             tv_id_format.setText("")
 //            Toast.makeText(this,"Right!!",Toast.LENGTH_SHORT).show()
             return true

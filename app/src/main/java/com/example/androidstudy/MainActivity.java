@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         list.add("chapter33 - SharedPerferences");
         list.add("chapter34 - Retrofit");
         list.add("chapter35 - LiveData");
+        list.add("chapter36 - Webview");
+        list.add("chapter37 - RxJava");
 
         MainActivityAdapter adapter = new MainActivityAdapter(list);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);

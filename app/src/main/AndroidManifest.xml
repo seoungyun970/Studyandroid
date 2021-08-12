@@ -121,6 +121,9 @@
         <activity android:name=".chapter34.MainMenuActivity"/>
         <activity android:name=".chapter35.LoginActivity"/>
         <activity android:name=".chapter35.RegisterActivity"/>
+        <activity android:name=".chapter36.WebViewActivity"/>
+        <activity android:name=".Chapter36Activity"/>
+        <activity android:name=".Chapter37Activity"/>
         <service android:name=".chapter30.CalcService" android:enabled="true"/>
         <service android:name=".chapter30.NewsService2" android:enabled="true">
             <intent-filter>
