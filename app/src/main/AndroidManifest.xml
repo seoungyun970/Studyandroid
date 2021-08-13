@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
+        android:name=".chapter38.application.KoinApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -124,6 +125,8 @@
         <activity android:name=".chapter36.WebViewActivity"/>
         <activity android:name=".Chapter36Activity"/>
         <activity android:name=".Chapter37Activity"/>
+        <activity android:name=".Chapter38Activity"/>
+        <activity android:name=".chapter38.KoinActivity"/>
         <service android:name=".chapter30.CalcService" android:enabled="true"/>
         <service android:name=".chapter30.NewsService2" android:enabled="true">
             <intent-filter>

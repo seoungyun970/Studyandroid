@@ -2,6 +2,8 @@ package com.example.androidstudy.chapter34.restful
 
 import com.example.androidstudy.chapter34.model.WorkSchedule
 import com.example.androidstudy.chapter34.model.User
+import com.example.androidstudy.chapter38.model.KoinUser
+import com.example.androidstudy.chapter38.request.RequestUser
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -23,4 +25,9 @@ interface RetrofitService {
     suspend fun suspendLogin(
         @Body parameters : User
     ): Call<ApiModel>*/
+
+    @POST(RequestUrl.LOGIN)
+    suspend fun withKoinLogin(
+        @Body parameters : RequestUser
+    ) : KoinUser
 }

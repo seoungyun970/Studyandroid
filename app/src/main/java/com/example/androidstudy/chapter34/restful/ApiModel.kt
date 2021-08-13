@@ -1,9 +1,11 @@
 package com.example.androidstudy.chapter34.restful
 
+import androidx.room.ColumnInfo
+import androidx.room.PrimaryKey
 import com.google.gson.JsonElement
 import com.google.gson.annotations.SerializedName
 
-data class ApiModel (
+data class ApiModel(
     @SerializedName("ResultCode")
     var resultCode: Int = -1,
 
@@ -11,6 +13,6 @@ data class ApiModel (
     var resultMsg: String? = null,
 
     @SerializedName("ResultObject")
-    var resultObject: JsonElement? = null        // return data 오는 곳
+    var resultObject: JsonElement        // return data 오는 곳
 
 )

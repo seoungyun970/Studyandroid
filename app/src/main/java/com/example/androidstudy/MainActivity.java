@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("chapter35 - LiveData");
         list.add("chapter36 - Webview");
         list.add("chapter37 - RxJava");
+        list.add("chapter37 - Koin");
 
         MainActivityAdapter adapter = new MainActivityAdapter(list);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
