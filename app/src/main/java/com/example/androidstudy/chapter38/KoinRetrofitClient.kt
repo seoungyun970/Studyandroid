@@ -3,6 +3,7 @@ package com.example.androidstudy.chapter38
 import com.example.androidstudy.chapter34.restful.RequestUrl.Companion.BASE_URL
 import com.example.androidstudy.chapter34.restful.RetrofitService
 import com.example.androidstudy.chapter38.networking.AutoInterceptor
+import com.example.androidstudy.chapter38.networking.ResponseHandler
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
@@ -16,7 +17,10 @@ val networkModule = module {
     }
 
     factory {
-        provideOkHttpClient(get())
+        provideOkHttpClient(get(),get())
+    }
+    factory {
+        provideLoggingInterceptor()
     }
 
     factory {
@@ -26,6 +30,10 @@ val networkModule = module {
     single {
         provideRetrofit(get())
     }
+
+    factory {
+        ResponseHandler()
+    }
 }
 
 fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
@@ -33,8 +41,14 @@ fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         .addConverterFactory(GsonConverterFactory.create()).build()
 }
 
-fun provideOkHttpClient(autoInterceptor: AutoInterceptor): OkHttpClient {
-    return OkHttpClient().newBuilder().addInterceptor(autoInterceptor).build()
+fun provideOkHttpClient(autoInterceptor: AutoInterceptor,loggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
+    return OkHttpClient().newBuilder().addInterceptor(autoInterceptor).addInterceptor(loggingInterceptor).build()
+}
+
+fun provideLoggingInterceptor() : HttpLoggingInterceptor {
+    val logger = HttpLoggingInterceptor()
+    logger.level = HttpLoggingInterceptor.Level.BODY
+    return logger
 }
 
 fun provideRetrofitService(retrofit: Retrofit): RetrofitService =

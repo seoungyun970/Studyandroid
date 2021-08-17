@@ -27,21 +27,21 @@ class ExampleViewModel(
     val etPw : MutableLiveData<String>
         get() = _etPw
 
-    val user: LiveData<KoinUser> = liveData {
-        emit(
-            userRepository.getUser(
-                RequestUser(
-                    "bhchoi_giosis",
-                    "12345",
-                    "N",
-                    "e505a053e5d7e990",
-                    "",
-                    "37.499756",
-                    "127.032454"
-                )
-            )
-        )
-    }
+//    val user: LiveData<KoinUser> = liveData {
+//        emit(
+//            userRepository.getUser(
+//                RequestUser(
+//                    "bhchoi_giosis",
+//                    "12345",
+//                    "N",
+//                    "e505a053e5d7e990",
+//                    "",
+//                    "37.499756",
+//                    "127.032454"
+//                )
+//            )
+//        )
+//    }
 
 
 }

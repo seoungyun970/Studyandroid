@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="bhchoi_giosis"
-        android:text="@={exampleViewModel.etId}"
+        android:text="bhchoi_giosis"
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="20dp"
         android:gravity="center"/>
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="12345"
-        android:text="@={exampleViewModel.etPw}"
+        android:text="bhchoi_giosis"
         android:id="@+id/tv_pw"
         app:layout_constraintTop_toBottomOf="@id/tv_id"
         android:textSize="20dp"
