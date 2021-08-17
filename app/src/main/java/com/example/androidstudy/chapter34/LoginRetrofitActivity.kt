@@ -97,7 +97,6 @@ class LoginRetrofitActivity : Activity(), View.OnClickListener {
                         Log.d("data.OpNm >> ", data.OpNm)
                         Log.d("data.OfficeCode >> ", data.OfficeCode)
                         Log.d("data.OfficeName >> ", data.OfficeName)
-
                     }
 
                 } else {

@@ -8,7 +8,9 @@ import okhttp3.logging.HttpLoggingInterceptor
 class AutoInterceptor() : Interceptor {
     companion object {
         const val userAgent =
-            "Android_QX.QUICK_2.5.8_191(GMKTV2_x_g_2_18YG9KOFH6zHDlyKzoDNI34XnCFqNLUDKcdCIXqgQ_g_3_;HMA-AL00;10;ko_KR)"
+            "Android_QX.QUICK_2.5.8_191(" +
+                    "GMKTV2_x_g_2_18YG9KOFH6zHDly" +
+                    "KzoDNI34XnCFqNLUDKcdCIXqgQ_g_3_;HMA-AL00;10;ko_KR)"
     }
 
     override fun intercept(chain: Interceptor.Chain): Response {

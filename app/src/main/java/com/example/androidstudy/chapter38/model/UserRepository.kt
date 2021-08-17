@@ -17,7 +17,7 @@ val userModule = module {
 
 class UserRepository(private val retrofitService: RetrofitService,private val responseHandler: ResponseHandler) {
 //    suspend fun getUser(requestUser : RequestUser) = retrofitService.withKoinLogin(requestUser)       //예외 처리 하기 전
-    suspend fun getUser(requestUser : RequestUser) : Resource<KoinUser> {
+    suspend fun getUser(requestUser : RequestUser) : Resource<KoinApiModel> {
         return try {
             val response = retrofitService.withKoinLogin(requestUser)
             return responseHandler.handleSuccess(response)

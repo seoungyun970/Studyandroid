@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
-import com.example.androidstudy.chapter38.model.KoinUser
 import com.example.androidstudy.chapter38.model.UserRepository
 import com.example.androidstudy.chapter38.request.RequestUser
 import org.koin.dsl.module
